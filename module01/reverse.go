@@ -1,4 +1,4 @@
-package module01
+package module01solutions
 
 // Reverse will return the provided word in reverse
 // order. Eg:
@@ -6,10 +6,10 @@ package module01
 //   Reverse("cat") => "tac"
 //   Reverse("alphabet") => "tebahpla"
 //
-func Reverse(s string) string {
-	runes := []rune(s)
-	for i, j := 0, len(s)-1; i < j; i, j = i+1, j-1 {
-		runes[i], runes[j] = runes[j], runes[i]
+func Reverse(word string) string {
+	var res string
+	for _, r := range word {
+		res = string(r) + res
 	}
-	return string(runes)
+	return res
 }
