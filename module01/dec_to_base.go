@@ -1,26 +1,5 @@
 package module01
 
-//import "strconv"
-
-var digits = map[int]string{
-	0:  "0",
-	1:  "1",
-	2:  "2",
-	3:  "3",
-	4:  "4",
-	5:  "5",
-	6:  "6",
-	7:  "7",
-	8:  "8",
-	9:  "9",
-	10: "A",
-	11: "B",
-	12: "C",
-	13: "D",
-	14: "E",
-	15: "F",
-}
-
 // DecToBase will return a string representing
 // the provided decimal number in the provided base.
 // This is limited to bases 2-16 for simplicity.
@@ -30,11 +9,12 @@ var digits = map[int]string{
 //   DecToBase(14, 16) => "E"
 //   DecToBase(14, 2) => "1110"
 //
-
 func DecToBase(dec, base int) string {
 	res := ""
+	var digits = "0123456789ABCDEF"
 	for dec != 0 {
-		res = digits[dec%base] + res
+		rem := dec % base
+		res = string(digits[rem]) + res
 		dec = dec / base
 	}
 
