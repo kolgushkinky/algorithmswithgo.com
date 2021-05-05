@@ -1,4 +1,4 @@
-package module01solutions
+package module01
 
 // Reverse will return the provided word in reverse
 // order. Eg:

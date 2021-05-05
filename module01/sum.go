@@ -1,4 +1,4 @@
-package module01solutions
+package module01
 
 // Sum will sum up all of the numbers passed
 // in and return the result

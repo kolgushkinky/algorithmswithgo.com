@@ -22,7 +22,7 @@ func FizzBuzz(n int) {
 		var isFizzBuzz = (isFizz && isBuzz)
 
 		if isFizzBuzz {
-			fmt.Print("FizzBuzz")
+			fmt.Print("Fizz Buzz")
 		} else if isFizz {
 			fmt.Print("Fizz")
 		} else if isBuzz {
@@ -30,6 +30,9 @@ func FizzBuzz(n int) {
 		} else {
 			fmt.Print(i)
 		}
-		fmt.Print(" ")
+		if i != n {
+			fmt.Print(", ")
+		}
 	}
+	fmt.Print("\n")
 }
