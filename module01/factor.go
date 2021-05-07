@@ -27,7 +27,7 @@ func Factor(primes []int, number int) []int {
 	l := len(primes)
 
 	for number > 1 {
-		for i := l - 1; i >= 0; i-- {
+		for i := 0; i <= l-1; i++ {
 			if number%primes[i] == 0 {
 				res = append(res, primes[i])
 				number /= primes[i]
