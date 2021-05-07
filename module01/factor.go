@@ -24,16 +24,26 @@ package module01
 func Factor(primes []int, number int) []int {
 
 	var res []int
-	l := len(primes)
 
-	for number > 1 {
-		for i := 0; i <= l-1; i++ {
-			if number%primes[i] == 0 {
-				res = append(res, primes[i])
-				number /= primes[i]
-			}
+	for _, prime := range primes {
+		for number%prime == 0 {
+			res = append(res, prime)
+			number /= prime
 		}
 	}
+
+	if number > 1 {
+		res = append(res, number)
+	}
+
+	// for number > 1 {
+	// 	for i := 0; i <= l-1; i++ {
+	// 		if number%primes[i] == 0 {
+	// 			res = append(res, primes[i])
+	// 			number /= primes[i]
+	// 		}
+	// 	}
+	// }
 
 	return res
 }
