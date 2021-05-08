@@ -25,5 +25,12 @@ package module01
 //   Fibonacci(14) => 377
 //
 func Fibonacci(n int) int {
-	return 0
+	switch {
+	case n == 0:
+		return 0
+	case n == 1:
+		return 1
+	default:
+		return Fibonacci(n-1) + Fibonacci(n-2)
+	}
 }
